@@ -11,11 +11,21 @@ cd sf2-fixme
 php bin/vendors install
 ```
 ### Database
-```mysql -h $DB_HOST -u $DB_USER -p$DB_PWD < create-sf2fixme-db.sql```
+ * Create the database if not exists :
 
-with ```$DB_HOST```,```$DB_USR``` and ```$DB_USR``` correctly set.
+```mysql -h $DB_HOST -u $DB_USER -p$DB_PWD -e "create database $DB_NAME" ```
 
-This will create the sf2fixme database on your mysql server (delete if existing)
+Define as well database parameters in ```app/config/parameters.ini``` after copying from ```app/config/parameters.ini.dst``` :
+
+```cp app/config/parameters.ini.dst app/config/parameters.ini```
+
+ * Create the schema :
+
+``` php app/console doctrine:schema:update --force ```
+
+ * Insert data :
+
+```mysql -h $DB_HOST -u $DB_USER -p$DB_PWD $DB_NAME < sf2_fixme_data.sql  ```
 
 ## Fixmes
  * .../app_dev.php/datagridbundle
