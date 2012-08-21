@@ -1,3 +1,0 @@
-[submodule "vendor/bundles/APY/DataGridBundle"]
-	path = vendor/bundles/APY/DataGridBundle
-	url = https://github.com/Abhoryo/APYDataGridBundle.git
