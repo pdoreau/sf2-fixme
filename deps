@@ -1,3 +1,7 @@
+[DataGridBundle]
+    git=http://github.com/Abhoryo/APYDataGridBundle.git
+    target=bundles/APY/DataGridBundle
+
 [symfony]
     git=http://github.com/symfony/symfony.git
     version=origin/2.0
