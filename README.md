@@ -28,5 +28,4 @@ Define as well database parameters in ```app/config/parameters.ini``` after copy
 ```mysql -h $DB_HOST -u $DB_USER -p$DB_PWD $DB_NAME < sf2_fixme_data.sql  ```
 
 ## Fixmes
- * .../app_dev.php/datagridbundle
- * .../app_dev.php/asseticbundle
+ Open your browser to the route / to see the list.
