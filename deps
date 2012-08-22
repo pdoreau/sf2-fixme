@@ -1,3 +1,7 @@
+[DoctrineExtensions]
+    git=https://github.com/beberlei/DoctrineExtensions.git
+    target=beberlei-doctrine-extensions
+
 [DataGridBundle]
     git=http://github.com/Abhoryo/APYDataGridBundle.git
     target=bundles/APY/DataGridBundle
