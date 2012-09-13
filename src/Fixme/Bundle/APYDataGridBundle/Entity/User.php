@@ -35,7 +35,7 @@ class User
      *
      * @ORM\OneToMany(targetEntity="UserCategory", mappedBy="user")
      * 
-     * @GRID\Column(field="userCategories.category.name:GroupConcat", title="Categories", filter="select", selectMulti="true")
+     * @GRID\Column(field="userCategories.category.name:GroupConcat", title="Categories", filter="select", selectMulti="true", selectFrom="values")
      */
     private $userCategories;
 
