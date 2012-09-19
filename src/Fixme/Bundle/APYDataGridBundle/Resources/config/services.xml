@@ -4,17 +4,10 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
-    <!--
-    <parameters>
-        <parameter key="fixme_apy_data_grid.example.class">Fixme\Bundle\APYDataGridBundle\Example</parameter>
-    </parameters>
-
     <services>
-        <service id="fixme_apy_data_grid.example" class="%fixme_apy_data_grid.example.class%">
-            <argument type="service" id="service_id" />
-            <argument>plain_value</argument>
-            <argument>%parameter_name%</argument>
+        <service id="grid.column.extended.text.column" class="Fixme\Bundle\APYDataGridBundle\Grid\Column\ExtendedTextColumn" public="false">
+            <tag name="grid.column.extension" />
         </service>
     </services>
-    -->
+    
 </container>

@@ -9,7 +9,7 @@ use APY\DataGridBundle\Grid\Mapping as GRID;
  * Fixme\Bundle\APYDataGridBundle\Entity\User
  *
  * @ORM\Table(name="user")
- * @GRID\Source(columns="id,lastname,userCategories.category.name:GroupConcat,service.name", groupBy={"id"})
+ * @GRID\Source(columns="id,lastname,userCategories.category.name:AtGroupConcat,service.name", groupBy={"id"})
  * @ORM\Entity
  */
 class User
@@ -35,7 +35,7 @@ class User
      *
      * @ORM\OneToMany(targetEntity="UserCategory", mappedBy="user")
      * 
-     * @GRID\Column(field="userCategories.category.name:GroupConcat", title="Categories", filter="select", selectMulti="true", selectFrom="values")
+     * @GRID\Column(type="extended_text", field="userCategories.category.name:AtGroupConcat", title="Categories", filter="select", selectMulti="true", selectFrom="values")
      */
     private $userCategories;
 

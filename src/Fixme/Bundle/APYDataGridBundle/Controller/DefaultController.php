@@ -16,27 +16,27 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
+
         $grid = $this->get('grid');
         $grid->setSource(new Entity('FixmeAPYDataGridBundle:User'));
 
-        $categoriesColumn = $grid->getColumn('userCategories.category.name:GroupConcat');
+        $categoriesColumn = $grid->getColumn('userCategories.category.name:AtGroupConcat');
 
         $categoryValues = array(
                 'cat1' => 'cat1',
                 'cat2' => 'cat2',
                 'cat3' => 'cat3',
+                'cat' => 'cat',
         );
-
-        $categoryValues['cat'] = 'cat';
 
         $categoriesColumn->setValues(
             $categoryValues
         );
 
         $categoriesColumn->setOperators(
-            array("like")
+            array("like","nlike","eq","neq")
         );
 
-		return $grid->getGridResponse('FixmeAPYDataGridBundle:Default:index.html.twig');
+        return $grid->getGridResponse('FixmeAPYDataGridBundle:Default:index.html.twig');
     }
 }
